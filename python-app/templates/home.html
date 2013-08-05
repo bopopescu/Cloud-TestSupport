@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Student Details</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{{ static_url("theme.css") }} />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Student<span class="logo_colour">Details</span></a></h1>
+          <h2>Student marks Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="/index">Home</a></li>
+		  <li class="selected"><a href="/home">New Student</a></li>
+          <li><a href="/results">Edit Details</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+		<form action="/success" method="post">
+		<div class="form_settings">
+		<p><span>First Name</span><input value="" name="firstname" id="firstname" class="text-input" type="text" required /></p>
+		<p><span>Last Name</span><input value="" name="lastname" id="lastname" class="text-input" type="text" required /></p>
+		<p><span>Roll No</span><input value="" name="rollno" id="rollno" class="text-input" type="number" required /></p>
+		<p><span>Physics</span><input value="" name="Marks1" id="Marks1" class="text-input" type="number" required /></p>
+		<p><span>Chemistry</span><input name="Marks2" id="Marks2" class="text-input" type="number" required /></p>
+		<p><span>Biology</span><input value="" name="Marks3" id="Marks3" class="text-input" type="number" required /></p>
+		<p><span>Maths</span><input name="Marks4" id="Marks4" class="text-input" type="number" required /></p>
+		<p style="padding-top: 15px"><span>&nbsp;</span><button class="button" type="submit" value="Calculate">Calculate</button>
+		<button class="button" type="reset" value="Reset">Clear</button>
+		<button class="button" type="submit" name ="Cancel" formaction="/index" formmethod="get" formnovalidate="formnovalidate">Cancel</button></p>
+		</div>
+		</form>
+      </div>
+    </div>
+     </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+    </div>
+  </div>
+</body>
+</html>

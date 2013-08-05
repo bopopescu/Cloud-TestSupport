@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Student Details</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{{ static_url("theme.css") }} />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Student<span class="logo_colour">Details</span></a></h1>
+          <h2>Student marks Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="#">Home</a></li>
+		  <li><a href="/home">New Student</a></li>
+          <li><a href="/results">Edit Details</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+        <table style="width:100%; border-spacing:0;">
+					<caption>
+				<h1>Students Mark Details</h1></caption>
+			<thead>
+				<tr>
+					<th scope="col">
+					<label class="text-input" >Full Name</label>
+						</th>
+					<th scope="col">
+						<label class="text-input" >Roll No</label></th>
+					<th scope="col">
+						<label class="text-input" >Physics</label></th>
+					<th scope="col">
+						<label class="text-input" >Chemistry</label></th>
+					<th scope="col">
+						<label class="text-input" >Biology</label></th>
+					<th scope="col">
+						<label class="text-input" >Maths</label></th>
+					<th scope="col">
+						<label class="text-input" >Total</label></th>
+					<th scope="col">
+						<label class="text-input" >Average</label></th>
+					<th scope="col">
+						<label class="text-input" >Grade</label></th>
+				</tr>
+			</thead>
+			<tbody>
+            {% for row in rows %}
+            {% block row %}
+				<tr>
+					<td>
+						<label class="text-input" >{{ escape(row.firstname)}} {{ escape(row.lastname)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.rollno)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.physics)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.chemistry)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.biology)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.maths)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.total)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.average)}}</label></td>
+					<td>
+						<label class="text-input" >{{ escape(row.grade)}}</label></td>
+				</tr>
+                {% end %}
+                {% end %}
+			</tbody>
+
+        </table>
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[I 130626 08:45:56 web:1462] 302 GET / (119.226.97.50) 0.96ms
+[I 130626 08:45:57 web:1462] 304 GET /login (119.226.97.50) 5.43ms
+[W 130626 08:45:57 web:1462] 404 GET /favicon.ico (119.226.97.50) 1.49ms
+[I 130626 08:46:02 web:1462] 200 POST /dashboard (119.226.97.50) 3.96ms
+[W 130626 08:46:03 web:1462] 404 GET /favicon.ico (119.226.97.50) 1.47ms
+[I 130626 08:47:03 main:103] Launching Instance https://dl.dropboxusercontent.com/u/24798834/testcase6213.zip chrome WinServer2k8 ['naviensubramani@gmail.com']
+[I 130626 08:47:03 ec2tests:34] Launching Instance <script>
+    ipconfig /all > c:\ipconfig.txt
+    @ECHO off
+    ECHO Hello World!
+    wget --no-check-certificate -O C:\stestcase.zip "https://dl.dropboxusercontent.com/u/24798834/testcase6213.zip"
+    7za e C:\stestcase.zip -oC:\stest-support\stestcases -y
+    For %%X in (C:\stest-support\stestcases\*.py) do (python %%X chrome WinServer2k8)
+    copy *.html C:\stest-support\stest-results /y
+    copy *.log.txt C:\stest-support\stest-results /y
+    python C:\stest-support\mailtest.py "['naviensubramani@gmail.com']" C:\stest-support\stest-results
+    shutdown -s
+    </script>
+    
+[I 130626 08:47:04 ec2tests:36] Instance Launched Reservation:r-21a86f77
+[I 130626 08:47:04 main:108] Launching Instance Id Reservation:r-21a86f77 
+[I 130626 08:47:04 web:1462] 302 POST /test (119.226.97.50) 683.13ms
+[I 130626 08:47:08 web:1462] 304 GET /results (119.226.97.50) 2.01ms
+[W 130626 08:47:08 web:1462] 404 GET /favicon.ico (119.226.97.50) 1.42ms

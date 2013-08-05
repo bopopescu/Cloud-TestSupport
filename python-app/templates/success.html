@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Student Details</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="{{ static_url("theme.css") }} />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Student<span class="logo_colour">Details</span></a></h1>
+          <h2>Student marks Database</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="/index">Home</a></li>
+		  <li><a href="/home">New Student</a></li>
+          <li><a href="/results">Edit Details</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="content">
+        <!-- insert the page content here -->
+		<div class="form_settings">
+		<h1>Successfully Saved Records</h1>
+		<p><span>Full Name</span><label class="text-input" >{{ escape(firstname) }} {{ escape(lastname) }}</label></p>
+		<p><span>Roll No</span><label class="text-input" >{{ escape(rollno) }}</label></p>
+		<p><span>Physics</span><label class="text-input" >{{ escape(Marks1) }}</label></p>
+		<p><span>Chemistry</span><label class="text-input" >{{ escape(Marks2) }}</label></p>
+		<p><span>Biology</span><label class="text-input" >{{ escape(Marks3) }}</label></p>
+		<p><span>Maths</span><label class="text-input" >{{ escape(Marks4) }}</label></p>
+		<p><span>Total</span><label class="text-input" >{{ escape(total) }}</label></p>
+		<p><span>Average</span><label class="text-input" >{{ escape(avg) }}</label></p>
+		<p><span>Grade</span><label class="text-input" >{{ escape(grade) }}</label></p>
+		</div>
+		</div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+    </div>
+  </div>
+</body>
+</html>
