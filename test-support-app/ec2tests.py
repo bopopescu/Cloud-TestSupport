@@ -4,7 +4,7 @@ from boto import regioninfo
 from boto import ec2
 import boto
 
-SETTINGS = eval(open('config.json', 'r').read())
+SETTINGS = eval(open('settings.json', 'r').read())
 
 #BASE_AMI = 'ami-b8400dea'
 #
