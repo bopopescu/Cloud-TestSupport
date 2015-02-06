@@ -8,8 +8,8 @@ SETTINGS = eval(open('settings.json', 'r').read())
 
 #BASE_AMI = 'ami-b8400dea'
 #
-#AWS_ACCESS_KEY = 'AKIAJRUIZQWYMPGNTACQ'
-#AWS_SECRET_KEY = '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'
+#AWS_ACCESS_KEY = 'Aky'
+#AWS_SECRET_KEY = 'sdsd/4w9EmJcGP3fIiVZ'
 
 ec2conn = boto.ec2.connect_to_region(region_name=SETTINGS['region_name'], aws_access_key_id=SETTINGS['AWS_ACCESS_KEY'], aws_secret_access_key=SETTINGS['AWS_SECRET_KEY'])
 
